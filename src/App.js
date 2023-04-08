@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom'
+import AccordionPage from './Pages/AcordionPage'
+ import DropeDownPage from './Pages/DropeDownPage'
+ import ButtonPage from './Pages/ButtonPage';
+ import ModalPage from './Pages/modalPage';
+ import TablePage from './Pages/TablePage';
+function App(){
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <AccordionPage />
+    },
+    {
+      path: '/dropedown',
+      element: <DropeDownPage />
+    },
+    {
+      path:'/button',
+      element:<ButtonPage />
+    },
+    {
+      path:'/modal',
+      element:<ModalPage />
+    },
+    {
+      path:'/table',
+      element:<TablePage />
+    },
+   
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  ]);
+return <div>
+
+
+  <RouterProvider router={router}/>
+</div>
 }
-
-export default App;
+export default App
