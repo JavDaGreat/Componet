@@ -1,7 +1,8 @@
-Basic components Like
-table/sortable table
-Modal
-DropDown
+Basic components Like:
 
-Button
-Accordion
+1.table/sortable table
+2.Modal
+3.DropDown
+
+4.Button
+5.Accordion
